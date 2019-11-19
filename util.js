@@ -8,9 +8,9 @@ module.exports = {
         if(m1ColumnsCount!=m2RowsCount)
             return null;
 
-        rm = [];
+        /*rm = [];
         for(i=0; i<m1RowsCount; i++)
-            rm[i] = [];
+            rm[i] = [];*/
 
         for(l=0; l<m1RowsCount; l++)
         {
@@ -19,11 +19,13 @@ module.exports = {
             {
                 for(j=0; j<m1ColumnsCount; j++)
                     r += m1[l][j] * m2[j][i];
-                rm[l][i] = r;
+                //rm[l][i] = r;
+                /*2*/process.stdout.write(r + " ");
                 r = 0;
             }
+            /*2*/console.log();
         }
 
-        return rm;
+        //return rm;
 	}
 }
